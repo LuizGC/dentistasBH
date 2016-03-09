@@ -9,24 +9,24 @@ function initMap() {
 		scaleControl: true
 	});
 
-	var marker, buffer;
+	var layers = {};
+	new ControleLimpar(layers, mapa);
+
+
+
+
 	google.maps.event.addListener(mapa, 'click', function (event) {
 
-		if(marker){
-			marker.setMap();
-		}
-		if(buffer){
-			buffer.setMap();
-		}
+
 
 		var position = event.latLng;
 
-		marker = new google.maps.Marker({
+		layers.marker = new google.maps.Marker({
 			position: position,
 			map: mapa
 		});
 
-		buffer = new google.maps.Circle({
+		layers.buffer = new google.maps.Circle({
 			strokeColor: '#FF0000',
 			strokeOpacity: 0.8,
 			strokeWeight: 2,
@@ -34,13 +34,25 @@ function initMap() {
 			fillOpacity: 0.35,
 			map: mapa,
 			center: position,
-			radius: 10000
+			radius: 2000
 		});
 
 		mapa.panTo(position);
 
-
+		instrucoes.style.display = 'none';
 	});
+
+	var instrucoes = document.getElementById("instrucoes");
+
+	window.addEventListener('mousemove', function(event){
+
+		var x = event.clientX + 20,
+		y = event.clientY- 25;
+		if ( x && y ){
+			instrucoes.style.left = x + "px";
+			instrucoes.style.top = y + "px";
+		}
+	}, false);
 
 
 }
