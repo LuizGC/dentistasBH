@@ -45,7 +45,7 @@ function mostrarDentistas(lista) {
     var domListaDentistas = document.getElementById("listaDentistas");
      var selecione = document.createElement("li");
      selecione.innerHTML = 'Selecione um dentista: ';
-      domListaDentistas.appendChild(selecione)
+      
     domListaDentistas.innerHTML = "", domListaDentistas.style.display = "block", lista.forEach(function(item) {
         var li = document.createElement("li");
         li.addEventListener("click", function() {
@@ -69,6 +69,8 @@ function mostrarDentistas(lista) {
         var html = " <fieldset><legend>Dentista</legend> ";
         html += '<a href="#">' + item.feature.R.name + "</a> <br><br>" + item.feature.R.cro + "</fieldset>", 
         li.innerHTML = html, domListaDentistas.appendChild(li);
+        
+        domListaDentistas.appendChild(selecione);
     });
 }
 
