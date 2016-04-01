@@ -1,4 +1,4 @@
-var enderecoMarker;
+var enderecoMarker, infowindow;
 
 function buscarEndereco(){
 	"use strict";
@@ -8,6 +8,12 @@ function buscarEndereco(){
 	document.getElementById('listaDentistas').style.display = 'none';
 
 	directionsDisplay.setDirections({routes: []});
+
+	if(infowindow){
+		infowindow.open(null);
+	}else{
+		infowindow = new google.maps.InfoWindow();
+	}
 
 	if(!endereco || endereco === ''){
 
@@ -31,7 +37,6 @@ function buscarEndereco(){
 
 	geocoder.geocode({ 'address': melhorarEndereco(endereco), 'region': 'BR' }, manipularEndereco);
 
-	document.getElementById("endereco").value = '';
 
 }
 
@@ -117,6 +122,10 @@ function mostrarDentistas(lista) {
 
 				li.addEventListener("click", function(){
 
+					if(infowindow){
+						infowindow.open(null);
+					}
+
 					var request = {
 						origin: enderecoMarker.getPosition(),
 						destination: item.feature.getGeometry().get(),
@@ -133,6 +142,22 @@ function mostrarDentistas(lista) {
 						}
 					});
 
+					geocoder.geocode({'location': item.feature.getGeometry().get()}, function(results, status) {
+
+						if(status === google.maps.GeocoderStatus.OK){
+
+
+							infowindow.setContent('<h3>' + item.feature.R.name + '</h3>' + results[0].formatted_address);
+
+							infowindow.setPosition(item.feature.getGeometry().get());
+							infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+
+							infowindow.open(mapa);
+
+						}
+
+					});
+
 				});
 
 				var html =  ' <fieldset><legend>Dentista</legend> ';
@@ -145,12 +170,6 @@ function mostrarDentistas(lista) {
 				li.innerHTML = html;
 
 				domListaDentistas.appendChild(li);
-
-		//geocoder.geocode({'location': item.feature.getGeometry().get()}, function(results, status) {
-		//
-		//	(status === google.maps.GeocoderStatus.OK ? 'Endereço: ' + results[0].formatted_address : '') +
-		//});
-
 
 
 	});
