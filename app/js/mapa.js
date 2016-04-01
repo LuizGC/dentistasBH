@@ -1,4 +1,4 @@
-var mapa, geocoder;
+var mapa, geocoder, directionsService, directionsDisplay;
 
 function initMap() {
 	"use strict";
@@ -15,6 +15,16 @@ function initMap() {
 	});
 
 	geocoder = new google.maps.Geocoder();
+
+	directionsService = new google.maps.DirectionsService();
+	directionsDisplay = new google.maps.DirectionsRenderer({
+		draggable: false,
+		map: mapa,
+		suppressMarkers: true,
+		preserveViewport: true
+	});
+
+	document.getElementById("endereco").focus();
 
 	mapa.data.addGeoJson(dentistas);
 

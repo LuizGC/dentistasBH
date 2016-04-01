@@ -7,6 +7,8 @@ function buscarEndereco(){
 
 	document.getElementById('listaDentistas').style.display = 'none';
 
+	directionsDisplay.setDirections({routes: []});
+
 	if(!endereco || endereco === ''){
 
 		alert('O campo endereço é obrigatório');
@@ -76,7 +78,7 @@ function listarDentistasProximos(){
 
 		proximos.push({
 			feature: feature,
-			distancia: google.maps.geometry.spherical.computeHeading(enderecoMarker.getPosition(), feature.getGeometry().get())
+			distancia: google.maps.geometry.spherical.computeDistanceBetween(enderecoMarker.getPosition(), feature.getGeometry().get())
 
 		});
 
@@ -84,9 +86,9 @@ function listarDentistasProximos(){
 
 	return proximos.sort(function(a, b){
 
-		return Math.abs(a.distancia) - Math.abs(b.distancia);
+		return a.distancia - b.distancia;
 
-	}).slice(0, 9);
+	});
 
 }
 
@@ -103,8 +105,6 @@ function mostrarDentistas(lista) {
 		return;
 	}
 
-	console.log(lista);
-
 	var domListaDentistas = document.getElementById('listaDentistas');
 
 	domListaDentistas.innerHTML = '';
@@ -113,30 +113,43 @@ function mostrarDentistas(lista) {
 
 	lista.forEach(function(item){
 
-		geocoder.geocode({'location': item.feature.getGeometry().get()}, function(results, status) {
-
 				var li =  document.createElement('li');
 
 				li.addEventListener("click", function(){
 
-					alert('sucesso');
+					var request = {
+						origin: enderecoMarker.getPosition(),
+						destination: item.feature.getGeometry().get(),
+						travelMode: google.maps.TravelMode.WALKING
+					};
+
+
+					directionsService.route(request, function(response, status) {
+
+						if (status === google.maps.DirectionsStatus.OK) {
+
+							directionsDisplay.setDirections(response);
+
+						}
+					});
 
 				});
 
 				var html =  ' <fieldset><legend>Dentista</legend> ';
 
 				html +=  '<a href="#">' + item.feature.R.name +'</a> <br><br>' +
-					item.feature.R.cro + '<br>'+
+					item.feature.R.cro +
 
-					(status === google.maps.GeocoderStatus.OK ? 'Endereço: ' + results[0].formatted_address : '') +
 					'</fieldset>';
 
 				li.innerHTML = html;
 
 				domListaDentistas.appendChild(li);
 
-
-		});
+		//geocoder.geocode({'location': item.feature.getGeometry().get()}, function(results, status) {
+		//
+		//	(status === google.maps.GeocoderStatus.OK ? 'Endereço: ' + results[0].formatted_address : '') +
+		//});
 
 
 
