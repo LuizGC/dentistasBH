@@ -5,11 +5,19 @@ html
 		// include: "type": "css", "files": "css/**/*.css"
 
 	body
+		#buscas
+			h1 Acha Dentista
+			#campos
+				input#endereco(type='text', name='endereco', placeholder='Onde você está?')
+				input#buscar(type='button', value='Buscar', onclick="buscarEndereco()")
+			ul#listaDentistas
+
+
 		#mapa
 
 		script(src="//localhost:35729/livereload.js")
 
-		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB9K6tItnpWQeDs2NYnbD6Z74AUXs-DaRI&callback=initMap', async='', defer='')
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB9K6tItnpWQeDs2NYnbD6Z74AUXs-DaRI&libraries=geometry&callback=initMap', async='', defer='')
 
 
 		// include: "type": "js", "files": "js/**/*.js"

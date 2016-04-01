@@ -397,7 +397,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. Monteiro de Castro Filho",
-				"cro": "CRO-MG 8972<"
+				"cro": "CRO-MG 8972"
 			},
 			"geometry": {
 				"type": "Point",
@@ -551,7 +551,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dra. Terezinha de Oliveira Braga Morato",
-				"cro": "CRO-MG 6968<"
+				"cro": "CRO-MG 6968"
 			},
 			"geometry": {
 				"type": "Point",
@@ -621,7 +621,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. MARCO ANTÔNIO DUARTE SIQUEIRA",
-				"cro": "CRO-MG 6754<"
+				"cro": "CRO-MG 6754"
 			},
 			"geometry": {
 				"type": "Point",
@@ -649,7 +649,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. joao carlos carvalho lopes",
-				"cro": "CRO-MG 4421<"
+				"cro": "CRO-MG 4421"
 			},
 			"geometry": {
 				"type": "Point",
@@ -705,7 +705,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. JOse LUiz ROdrigues gIarola",
-				"cro": "CRO-MG 6564<"
+				"cro": "CRO-MG 6564"
 			},
 			"geometry": {
 				"type": "Point",
@@ -831,7 +831,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. Luiz Antonio Lourenço de Paula",
-				"cro": "CRO-MG 8601<"
+				"cro": "CRO-MG 8601"
 			},
 			"geometry": {
 				"type": "Point",
@@ -929,7 +929,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. Eugenio Gomes de Carvalho Filho",
-				"cro": "CRO-MG 9056<"
+				"cro": "CRO-MG 9056"
 			},
 			"geometry": {
 				"type": "Point",
@@ -999,7 +999,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. Aristides Pinheiro",
-				"cro": "CRO-MG 8365<"
+				"cro": "CRO-MG 8365"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1139,7 +1139,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. LINEU MARTINS CASTRO JUNIOR",
-				"cro": "CRO-MG 8510<"
+				"cro": "CRO-MG 8510"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1251,7 +1251,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. Aristides Pinheiro",
-				"cro": "CRO-MG 8365<"
+				"cro": "CRO-MG 8365"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1293,7 +1293,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. gastão de deus vitor rodrigues",
-				"cro": "CRO-MG 3250<"
+				"cro": "CRO-MG 3250"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1307,7 +1307,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dra. Aparecida Barbato",
-				"cro": "CRO-MG 4075<"
+				"cro": "CRO-MG 4075"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1377,7 +1377,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. NEWTON RODRIGUES DA SILVA JÚNIOR",
-				"cro": "CRO-MG 6339<"
+				"cro": "CRO-MG 6339"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1405,7 +1405,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dra. Fatima Maria Mendonça Passos",
-				"cro": "CRO-MG 9247<"
+				"cro": "CRO-MG 9247"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1643,7 +1643,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. Gilberto Antonio Silva",
-				"cro": "CRO-MG 9461<"
+				"cro": "CRO-MG 9461"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1699,7 +1699,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dra. Mariangela Vieira Savoi",
-				"cro": "CRO-MG 7237<"
+				"cro": "CRO-MG 7237"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1825,7 +1825,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. Laércio Eustáquio Portilho de Magalhães",
-				"cro": "CRO-MG 6047<"
+				"cro": "CRO-MG 6047"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1867,7 +1867,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dr. murilo gomes batista filho",
-				"cro": "CRO-MG 4207<"
+				"cro": "CRO-MG 4207"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1993,7 +1993,7 @@ var dentistas = {
 			"type": "Feature",
 			"properties": {
 				"name": "Dra. Norma Alves Lima",
-				"cro": "CRO-MG 6430<"
+				"cro": "CRO-MG 6430"
 			},
 			"geometry": {
 				"type": "Point",

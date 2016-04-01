@@ -134,20 +134,11 @@ module.exports = function(grunt){
 			tmp: ['<%= globalConfig.dev  %>'],
 			css: ['<%= globalConfig.dev  %>/css/*.css'],
 			js: ['<%= globalConfig.dev  %>/js/*.js']
-		},
-		copy: {
-			dev: {
-				files: [
-					// includes files within path
-					{expand: true, flatten: true, src: ['app/camadas/*'], dest: '<%= globalConfig.dev  %>/camadas'},
-
-				]
-			}
 		}
 
 
 
 	});
 
-	grunt.registerTask('dev', ['jshint:all','clean:tmp', 'uglify:dev', 'jade:dev', 'less:dev', 'includeSource:dev', 'copy:dev', 'connect', 'watch']);
+	grunt.registerTask('dev', ['jshint:all','clean:tmp', 'uglify:dev', 'jade:dev', 'less:dev', 'includeSource:dev', 'connect', 'watch']);
 };

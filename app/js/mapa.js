@@ -1,14 +1,21 @@
+var mapa, geocoder;
+
 function initMap() {
 	"use strict";
 
-	var mapa = new google.maps.Map(document.getElementById('mapa'), {
-		zoom: 7,
+	mapa = new google.maps.Map(document.getElementById('mapa'), {
+		zoom: 10,
 		center: {lat: -19.9166813, lng: -43.9344931},
 		zoomControl: true,
+		zoomControlOptions: {
+			position: google.maps.ControlPosition.LEFT_TOP
+		},
+		streetViewControl: false,
 		scaleControl: true
 	});
 
+	geocoder = new google.maps.Geocoder();
 
-	console.log(dentistas);
+	mapa.data.addGeoJson(dentistas);
 
 }
