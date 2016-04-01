@@ -43,6 +43,9 @@ function mostrarDentistas(lista) {
     "use strict";
     if (!lista || lista.length <= 0) return void alert("Não foram encontrados dentistas proximos!");
     var domListaDentistas = document.getElementById("listaDentistas");
+     var selecione = document.createElement("li");
+     selecione.innerHTML = 'Selecione um dentista: ';
+      domListaDentistas.appendChild(selecione)
     domListaDentistas.innerHTML = "", domListaDentistas.style.display = "block", lista.forEach(function(item) {
         var li = document.createElement("li");
         li.addEventListener("click", function() {
